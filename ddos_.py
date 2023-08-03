@@ -17,8 +17,9 @@ year = now.year
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 bytes = random._urandom(1490)
-def clear_screen():
-    os.system('printf "\033c"')
+def clear_line():
+    # Utilise la séquence d'échappement ANSI pour effacer la ligne courante dans le terminal iSH
+    print("\033[2K", end="\r")
 print(Fore.LIGHTMAGENTA_EX + '''
 ██████╗ ██████╗  ██████╗ ███████╗    ██████╗ ██╗   ██╗    ███████╗ █████╗ ██████╗ ██████╗ ██╗
 ██╔══██╗██╔══██╗██╔═══██╗██╔════╝    ██╔══██╗╚██╗ ██╔╝    ██╔════╝██╔══██╗██╔══██╗██╔══██╗██║
